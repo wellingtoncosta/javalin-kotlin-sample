@@ -1,4 +1,6 @@
-package io.wellingtoncosta.demo.javalin.domain
+package io.wellingtoncosta.demo.javalin.domain.contract
+
+import io.wellingtoncosta.demo.javalin.domain.model.User
 
 
 /**

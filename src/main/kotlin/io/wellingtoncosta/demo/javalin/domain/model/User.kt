@@ -1,4 +1,4 @@
-package io.wellingtoncosta.demo.javalin.domain
+package io.wellingtoncosta.demo.javalin.domain.model
 
 /**
  * @author Wellington Costa on 21/01/19

@@ -1,10 +1,9 @@
 package io.wellingtoncosta.demo.javalin.web
 
 import io.javalin.Handler
-import io.wellingtoncosta.demo.javalin.domain.User
-import io.wellingtoncosta.demo.javalin.domain.UserRepository
+import io.wellingtoncosta.demo.javalin.domain.model.User
+import io.wellingtoncosta.demo.javalin.domain.contract.UserRepository
 import io.wellingtoncosta.demo.javalin.paramAsLong
-
 
 /**
  * @author Wellington Costa on 21/01/19

@@ -1,7 +1,7 @@
 package io.wellingtoncosta.demo.javalin.config
 
 import io.wellingtoncosta.demo.javalin.data.UserDataRepository
-import io.wellingtoncosta.demo.javalin.domain.UserRepository
+import io.wellingtoncosta.demo.javalin.domain.contract.UserRepository
 import io.wellingtoncosta.demo.javalin.web.Router
 import io.wellingtoncosta.demo.javalin.web.UserController
 import org.koin.dsl.module.module

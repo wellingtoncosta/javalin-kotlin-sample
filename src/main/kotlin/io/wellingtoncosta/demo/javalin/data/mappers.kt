@@ -1,6 +1,6 @@
 package io.wellingtoncosta.demo.javalin.data
 
-import io.wellingtoncosta.demo.javalin.domain.User
+import io.wellingtoncosta.demo.javalin.domain.model.User
 import org.jetbrains.exposed.sql.ResultRow
 
 /**

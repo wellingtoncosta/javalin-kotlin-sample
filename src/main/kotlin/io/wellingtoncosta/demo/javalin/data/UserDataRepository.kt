@@ -1,7 +1,8 @@
 package io.wellingtoncosta.demo.javalin.data
 
-import io.wellingtoncosta.demo.javalin.domain.User
-import io.wellingtoncosta.demo.javalin.domain.UserRepository
+import io.wellingtoncosta.demo.javalin.domain.model.User
+import io.wellingtoncosta.demo.javalin.domain.exception.UserNotFoundException
+import io.wellingtoncosta.demo.javalin.domain.contract.UserRepository
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
 import javax.sql.DataSource
@@ -9,7 +10,8 @@ import javax.sql.DataSource
 /**
  * @author Wellington Costa on 21/01/19
  */
-class UserDataRepository(private val dataSource: DataSource) : UserRepository {
+class UserDataRepository(private val dataSource: DataSource) :
+    UserRepository {
 
     init {
         transaction(Database.connect(dataSource)) {
@@ -24,7 +26,8 @@ class UserDataRepository(private val dataSource: DataSource) : UserRepository {
     }
 
     override fun getOne(id: Long) = transaction {
-        UserTable.select { UserTable.id eq(id) }.map { it.toUserDomain() }.first()
+        UserTable.select { UserTable.id eq(id) }.map { it.toUserDomain() }.firstOrNull()
+            ?: throw UserNotFoundException(id)
     }
 
     override fun create(user: User) = transaction {
