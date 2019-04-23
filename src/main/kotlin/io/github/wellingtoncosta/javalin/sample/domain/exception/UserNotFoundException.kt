@@ -1,4 +1,4 @@
-package io.wellingtoncosta.demo.javalin.domain.exception
+package io.github.wellingtoncosta.javalin.sample.domain.exception
 
 import java.lang.RuntimeException
 

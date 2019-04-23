@@ -1,4 +1,4 @@
-package io.wellingtoncosta.demo.javalin
+package io.github.wellingtoncosta.javalin.sample.resources.extension
 
 import io.javalin.Context
 

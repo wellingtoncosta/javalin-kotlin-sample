@@ -1,6 +1,6 @@
-package io.wellingtoncosta.demo.javalin.domain.contract
+package io.github.wellingtoncosta.javalin.sample.domain.repository
 
-import io.wellingtoncosta.demo.javalin.domain.model.User
+import io.github.wellingtoncosta.javalin.sample.domain.entity.User
 
 
 /**

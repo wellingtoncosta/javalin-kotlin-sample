@@ -1,4 +1,4 @@
-package io.wellingtoncosta.demo.javalin.config
+package io.github.wellingtoncosta.javalin.sample.app.config
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource

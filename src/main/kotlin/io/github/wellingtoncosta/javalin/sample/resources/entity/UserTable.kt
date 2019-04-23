@@ -1,4 +1,4 @@
-package io.wellingtoncosta.demo.javalin.data
+package io.github.wellingtoncosta.javalin.sample.resources.entity
 
 import org.jetbrains.exposed.sql.Table
 

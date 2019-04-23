@@ -1,4 +1,4 @@
-package io.wellingtoncosta.demo.javalin.domain.model
+package io.github.wellingtoncosta.javalin.sample.domain.entity
 
 /**
  * @author Wellington Costa on 21/01/19

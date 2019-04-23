@@ -1,8 +1,10 @@
-package io.wellingtoncosta.demo.javalin.data
+package io.github.wellingtoncosta.javalin.sample.resources.repository
 
-import io.wellingtoncosta.demo.javalin.domain.model.User
-import io.wellingtoncosta.demo.javalin.domain.exception.UserNotFoundException
-import io.wellingtoncosta.demo.javalin.domain.contract.UserRepository
+import io.github.wellingtoncosta.javalin.sample.domain.entity.User
+import io.github.wellingtoncosta.javalin.sample.domain.exception.UserNotFoundException
+import io.github.wellingtoncosta.javalin.sample.domain.repository.UserRepository
+import io.github.wellingtoncosta.javalin.sample.resources.entity.UserTable
+import io.github.wellingtoncosta.javalin.sample.resources.extension.toUserDomain
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
 import javax.sql.DataSource
@@ -10,7 +12,7 @@ import javax.sql.DataSource
 /**
  * @author Wellington Costa on 21/01/19
  */
-class UserDataRepository(private val dataSource: DataSource) :
+class UserDatabaseRepository(private val dataSource: DataSource) :
     UserRepository {
 
     init {
@@ -48,7 +50,7 @@ class UserDataRepository(private val dataSource: DataSource) :
                 it[phone] = user.phone
             }
         }.let {
-            UserTable.select { UserTable.id  eq id }.map { user -> user.toUserDomain() }.first()
+            UserTable.select { UserTable.id eq id }.map { user -> user.toUserDomain() }.first()
         }
     }
 

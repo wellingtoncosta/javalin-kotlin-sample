@@ -1,6 +1,7 @@
-package io.wellingtoncosta.demo.javalin.data
+package io.github.wellingtoncosta.javalin.sample.resources.extension
 
-import io.wellingtoncosta.demo.javalin.domain.model.User
+import io.github.wellingtoncosta.javalin.sample.domain.entity.User
+import io.github.wellingtoncosta.javalin.sample.resources.entity.UserTable
 import org.jetbrains.exposed.sql.ResultRow
 
 /**

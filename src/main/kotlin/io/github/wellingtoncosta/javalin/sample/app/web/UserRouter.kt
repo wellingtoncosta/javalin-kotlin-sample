@@ -1,14 +1,13 @@
-package io.wellingtoncosta.demo.javalin.web
+package io.github.wellingtoncosta.javalin.sample.app.web
 
+import io.github.wellingtoncosta.javalin.sample.app.web.UserController
 import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.*
 
 /**
  * @author Wellington Costa on 21/01/19
  */
-class Router(
-    private val controller: UserController
-)  {
+class UserRouter(private val controller: UserController)  {
 
     fun register(app: Javalin) {
         app.routes {

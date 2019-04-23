@@ -1,9 +1,9 @@
-package io.wellingtoncosta.demo.javalin.web
+package io.github.wellingtoncosta.javalin.sample.app.web
 
 import io.javalin.Handler
-import io.wellingtoncosta.demo.javalin.domain.model.User
-import io.wellingtoncosta.demo.javalin.domain.contract.UserRepository
-import io.wellingtoncosta.demo.javalin.paramAsLong
+import io.github.wellingtoncosta.javalin.sample.domain.entity.User
+import io.github.wellingtoncosta.javalin.sample.domain.repository.UserRepository
+import io.github.wellingtoncosta.javalin.sample.resources.extension.paramAsLong
 
 /**
  * @author Wellington Costa on 21/01/19

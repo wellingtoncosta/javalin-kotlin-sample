@@ -5,12 +5,14 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath(kotlin("gradle-plugin", "1.3.20"))
+        classpath(kotlin("gradle-plugin", "1.3.30"))
     }
 }
 
 plugins {
-    kotlin("jvm") version "1.3.20"
+    application
+    kotlin("jvm") version "1.3.30"
+    id("com.github.johnrengelman.shadow") version "5.0.0"
 }
 
 group = "io.github.wellingtoncosta"
@@ -22,9 +24,23 @@ repositories {
     maven(url = "https://kotlin.bintray.com/kotlinx")
 }
 
+application {
+    mainClassName = "io.github.wellingtoncosta.javalin.sample.app.MainKt"
+}
+
+tasks.withType<Jar> {
+    manifest {
+        attributes(
+            mapOf(
+                "Main-Class" to application.mainClassName
+            )
+        )
+    }
+}
+
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("io.javalin:javalin:2.6.0")
+    implementation("io.javalin:javalin:2.8.0")
     implementation("org.jetbrains.exposed:exposed:0.12.2")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.9.8")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8")
